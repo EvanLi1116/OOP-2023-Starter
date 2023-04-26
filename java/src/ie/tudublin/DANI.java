@@ -1,9 +1,5 @@
 package ie.tudublin;
 
-import java.io.File;
-
-import java.util.Scanner;
-
 import java.util.ArrayList;
 
 import processing.core.PApplet;
@@ -19,10 +15,9 @@ public class DANI extends PApplet {
 
     String[] sonnet;
 
-    public String[] writeSonnet()
+    public String[] writeSonnet(String[] sonnet)
     {
-		ArrayList<String> sonnet = new ArrayList<String>();
-		sonnet.add(String[0]);
+
         return null;
     }
 
@@ -33,7 +28,10 @@ public class DANI extends PApplet {
 	}
 
 	public void keyPressed() {
+		if (keyCode == ' ')
+		{
 
+		}
 	}
 
 	float off = 0;
@@ -45,13 +43,18 @@ public class DANI extends PApplet {
 		noStroke();
 		textSize(20);
         textAlign(CENTER, CENTER);
+
+		String[] sonnet = loadFile();
+		writeSonnet(sonnet);
         
 	}
 
-	public void loadFile()
+	public String[] loadFile()
 	{
-		String[] textfile = loadStrings("filename.txt");
-		String[] wordArray = textfile.split(" ");
+		String[] textfile = loadStrings("smalltxt.txt");
+		String[] sonnet = textfile.split(" ");
+
+		return sonnet;
 	}
 
 	public void findWord(String[] a)
