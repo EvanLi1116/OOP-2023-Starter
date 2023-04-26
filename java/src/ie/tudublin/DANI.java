@@ -1,5 +1,9 @@
 package ie.tudublin;
 
+import java.io.File;
+
+import java.util.Scanner;
+
 import java.util.ArrayList;
 
 import processing.core.PApplet;
@@ -17,6 +21,8 @@ public class DANI extends PApplet {
 
     public String[] writeSonnet()
     {
+		ArrayList<String> sonnet = new ArrayList<String>();
+		sonnet.add(String[0]);
         return null;
     }
 
@@ -44,10 +50,11 @@ public class DANI extends PApplet {
 
 	public void loadFile()
 	{
-		
+		String[] textfile = loadStrings("filename.txt");
+		String[] wordArray = textfile.split(" ");
 	}
 
-	public void findWord(str)
+	public void findWord(String[] a)
 	{
 
 	}
@@ -67,8 +74,8 @@ public class Follow extends PApplet
 
 public class Words extends PApplet
 {
-	public void findFollow(str)
+	public void findFollow(String[] b)
 	{
-		
+
 	}
 }
