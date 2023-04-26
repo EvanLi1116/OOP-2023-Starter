@@ -41,4 +41,34 @@ public class DANI extends PApplet {
         textAlign(CENTER, CENTER);
         
 	}
+
+	public void loadFile()
+	{
+		
+	}
+
+	public void findWord(str)
+	{
+
+	}
+
+	public void printModel()
+	{
+
+	}
+
+
+}
+
+public class Follow extends PApplet
+{
+
+}
+
+public class Words extends PApplet
+{
+	public void findFollow(str)
+	{
+		
+	}
 }
