@@ -15,9 +15,15 @@ public class DANI extends PApplet {
 
     String[] sonnet;
 
-    public String[] writeSonnet(String[] sonnet)
+    public String[] writeSonnet(String[] array)
     {
+		ArrayList<String> sonnet = new ArrayList<String>();
 
+		//convert array into ArrayList
+		for(String text:array)
+		{
+			sonnet.add(text);
+		}
         return null;
     }
 
@@ -30,7 +36,7 @@ public class DANI extends PApplet {
 	public void keyPressed() {
 		if (keyCode == ' ')
 		{
-
+			draw(); //reset if space is pressed
 		}
 	}
 
@@ -49,7 +55,7 @@ public class DANI extends PApplet {
         
 	}
 
-	public String[] loadFile()
+	public String[] loadFile() //read file and load into array
 	{
 		String[] textfile = loadStrings("smalltxt.txt");
 		String[] sonnet = textfile.split(" ");
